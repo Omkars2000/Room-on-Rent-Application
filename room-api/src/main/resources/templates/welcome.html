@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1" xmlns:th="http://www.thymeleaf.org">
+<title>room adding</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="container-fluid text-center ">
+
+  <h1> ADD THE ROOM</h1>
+  <form th:action="@{/insertroom}" method="post">
+  <div class="from-group">
+  <label>SELECT THE TYPE OF ROOM</label>
+   <select name="roomtype" class="form-select" aria-label="Default select example">
+   <option selected>select from list</option>
+   <option value="1RK">1RK</option>
+  <option value="1BHK">1BHK</option>
+  <option value="2BHK">2BHK</option>
+  <option value="3BHK">3BHK</option>
+  </select><br><br>
+   </div>
+  <div class="from-group">
+  <label>ENTER OWNER NAME</label><br>
+  <input type="text" name="owner" placeholder="eg.omkar sathe"  class="form-control"><br><br>
+  </div>
+  <div class="from-group">
+   <label>ENTER ROOM LOCATION</label><br>
+  <input type="text" name="location" placeholder="eg.hadapser,pune"  class="form-control"><br><br>
+   </div>
+   <div class="from-group">
+   <label>UPLOAD THE ROOM PHOTO</label><br>
+  <label for="img">Select image:</label><br>
+  <input type="file" id="img" name="img" accept="image/*"  class="form-control"><br><br>
+    </div>
+    <div class="from-group">
+    <label>ENTER OWNER CONTACT NO</label><br>
+  <input type="text" name="ownercont" placeholder="eg.7219470204"  class="form-control"><br><br>
+ </div>
+ <div class="from-group">
+    <input type="submit" name="SUBMIT" >
+ </div>
+  </form>
+  </div>
+  <footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+ </footer>
+</body>
+
+</html>
